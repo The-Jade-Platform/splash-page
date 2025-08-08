@@ -30,9 +30,9 @@ export default function Home() {
 
       {/* Starting Center Logo/phrase here */}
 
-        <section className="relative h-screen pl-10 w-full max-w-6xl px-6 py-12">
-
-          <div className="absolute inset-x-0 -translate-y-1/2 w-full max-w-6xl px-6 mt-10" >
+       <section className = "absolute top-0 w-screen h-1/5 bg-blue-100">
+          {/* absolute inset-x-0 -translate-y-1/2*/}
+          <div className="static top-0 mx-auto w-full max-w-6xl px-6 mt-10" >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
               Options, Simplified for Advisors
               </h1> */}
@@ -46,12 +46,14 @@ export default function Home() {
               </h1>
 
           </div>
+        </section>
 
           {/* <img
             src="/Assets/logo.png"
             alt="Jade Dashboard Preview"
             className = "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
           /> */}
+         <section className="relative h-screen pl-10 w-full max-w-6xl px-6 py-12">
 
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
           <div className = "flex items-center justify-center h-screen">
