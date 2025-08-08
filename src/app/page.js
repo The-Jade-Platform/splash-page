@@ -50,7 +50,7 @@ export default function Home() {
             // className = "flex items-center justify-center"
           />
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
-          <h1 className = "relative top-1/2 -translate-y-1/2 ms-60 text-4xl md:text-3xl font-bold text-[#0a0101]">
+          <h1 className = "relative top-1/2 -translate-y-1/2 ms-60 text-4xl md:text-3xl font-bold text-[#424952]">
             Options, Simplified for Advisors
             </h1>
 
@@ -74,7 +74,7 @@ export default function Home() {
         </p>
       </section>
       <section className="w-full max-w-6xl mb-4">
-        <h2 className="text-2xl font-semibold text-white mb-8">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
           Meet the Team
         </h2>
         
