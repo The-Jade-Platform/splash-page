@@ -4,16 +4,7 @@ import JoinWaitList from "./Components/joinwaitlist";
 export default function Home() {
   return (
     // annabel -- setting new colors
-    <div className =" min-h-screen flex flex-col items-center justify-center bg-gradient-to-bottom from-white to-[#016340] text-gray-800 font-sans text-center">
-      <header className="w-full max-w-6xl px-6 py-10" >
-          {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
-          Options, Simplified for Advisors
-          </h1> */}
-          <p className = "text-lg text-gray-700 max-w-2xl mx-auto">
-          Jade helps wealth advisors manage covered call strategies at scale —
-          with intelligent opportunity scanning, client reporting, and
-          compliance oversight.
-          </p>
+    <div className =" min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-[#335E95] text-gray-800 font-sans text-center">
           {/* <JoinWaitList/> */}
           {/* <form className = "mt-6 flex flex-col  gap-2 max-w-md mx-auto">
             <div>
@@ -35,25 +26,42 @@ export default function Home() {
                 Join the Waitlist
               </button>
           </form> */}
-      </header>
+      
 
       {/* Starting Center Logo/phrase here */}
 
         <section className="relative h-screen pl-10 w-full max-w-6xl px-6 py-12">
+
+          <header className="w-full max-w-6xl px-6 mt-10" >
+              {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
+              Options, Simplified for Advisors
+              </h1> */}
+              <p className = "text-lg text-gray-700 max-w-2xl mx-auto">
+              Jade helps wealth advisors manage covered call strategies at scale —
+              with intelligent opportunity scanning, client reporting, and
+              compliance oversight.
+              </p>
+            </header>
           <img
             src="/Assets/logo.png"
             alt="Jade Dashboard Preview"
-            className = "absolute top-1/2 left-1/2 -translate-y-1/2"
+            className = "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
             // className = "container max-w-2xl mx-auto"
             // className = "flex items-center justify-center"
           />
-          <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 ">
+          {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
+          <h1 className = "relative top-1/2 -translate-y-1/2 ms-60 text-4xl md:text-3xl font-bold text-[#0a0101]">
             Options, Simplified for Advisors
             </h1>
 
         </section>
 
+      {/* Sencond half of the page */}
+
       <section className="w-full max-w-4xl px-6 py-12 mb-20">
+        <h1 className = "mt-16 text-4xl font-semibold mb-4">
+            About Jade
+          </h1>
         <h2 className = "mt-16 text-2xl font-semibold mb-4">
         Built by advisors, for advisors.
         </h2>
@@ -65,8 +73,8 @@ export default function Home() {
 
         </p>
       </section>
-      <section className="w-full max-w-6xl px-6 py-12">
-        <h2 className="text-2xl font-semibold text-[#4A3AFF] mb-8">
+      <section className="w-full max-w-6xl mb-4">
+        <h2 className="text-2xl font-semibold text-white mb-8">
           Meet the Team
         </h2>
         
@@ -134,6 +142,23 @@ export default function Home() {
               Inc. He has held a number of Securities Licenses over the tenure of his career (6, 7,
               65, 26).
             </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 className="text-xl font-bold text-gray-900">
+              Annabel Huber
+            </h3>
+            <p className="text-gray-700">Operations Analyst</p>
+            <p className="text-sm text-gray-500 mt-2">
+              Annabel is a Colby College graduate, holding her Bachelor’s degree in Astrophysics and Computer Science. At Jade, she works with programming, market research, and strategic analysis. 
+              </p>
+            <p className="text-sm text-gray-500 mt-2">
+            While her educational background gives her an analytical mindset and logic-based approach to finding solutions, Annabel has also worked in many customer-facing roles in the past, which drive her passion for a client-based product made for the needs of real people. 
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+            The combination of strong product development with advanced mathematical and problem solving skills allows Annabel to tackle problems with Jade through a lens of curiosity, innovation, and excitement.
+            </p>
+            
           </div>
           
         </div>
