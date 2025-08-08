@@ -3,8 +3,8 @@ import JoinWaitList from "./Components/joinwaitlist";
 
 export default function Home() {
   return (
-    // annabel -- setting new colors
-    <div className =" min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-[#335E95] text-gray-800 font-sans text-center">
+    // annabel -- setting new colors hex code [#335E95] for logo color
+    <div className =" min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#335E95] to-white to-[50%] text-gray-800 font-sans text-center">
           {/* <JoinWaitList/> */}
           {/* <form className = "mt-6 flex flex-col  gap-2 max-w-md mx-auto">
             <div>
@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* Starting Center Logo/phrase here */}
 
-       <section className = "absolute top-0 w-screen h-1/5 bg-blue-100">
+       <section className = "absolute top-0 w-screen h-1/5 bg-[#c5d4e8]">
           {/* absolute inset-x-0 -translate-y-1/2*/}
           <div className="static top-0 mx-auto w-full max-w-6xl px-6 mt-10" >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
@@ -70,7 +70,7 @@ export default function Home() {
       {/* Sencond half of the page */}
 
       <section className="w-full max-w-4xl px-6 py-12 mb-20">
-        <h1 className = "mt-16 text-4xl font-semibold mb-4">
+        <h1 className = "text-4xl font-semibold mb-4">
             About Jade
           </h1>
         <h2 className = "mt-16 text-2xl font-semibold mb-4">
