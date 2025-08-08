@@ -32,27 +32,36 @@ export default function Home() {
 
         <section className="relative h-screen pl-10 w-full max-w-6xl px-6 py-12">
 
-          <header className="w-full max-w-6xl px-6 mt-10" >
+          <div className="absolute inset-x-0 -translate-y-1/2 w-full max-w-6xl px-6 mt-10" >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
               Options, Simplified for Advisors
               </h1> */}
-              <p className = "text-lg text-gray-700 max-w-2xl mx-auto">
-              Jade helps wealth advisors manage covered call strategies at scale —
-              with intelligent opportunity scanning, client reporting, and
-              compliance oversight.
-              </p>
-            </header>
-          <img
+              <img
+                src="/Assets/logo.png"
+                alt="Jade Dashboard Preview"
+                className = "mx-auto max-w-1/3"
+              />
+              <h1 className = "relative left-7 bottom-5 text-4xl md:text-xl font-bold text-[#424952]">
+                  Options, Simplified for Advisors
+              </h1>
+
+          </div>
+
+          {/* <img
             src="/Assets/logo.png"
             alt="Jade Dashboard Preview"
             className = "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
-            // className = "container max-w-2xl mx-auto"
-            // className = "flex items-center justify-center"
-          />
+          /> */}
+
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
-          <h1 className = "relative top-1/2 -translate-y-1/2 ms-60 text-4xl md:text-3xl font-bold text-[#424952]">
-            Options, Simplified for Advisors
-            </h1>
+          <div className = "flex items-center justify-center h-screen">
+            <p className = "mx-auto text-4xl text-gray-700 max-w-3xl">
+                Jade helps wealth advisors manage covered call strategies at scale —
+                with intelligent opportunity scanning, client reporting, and
+                compliance oversight.
+                </p>
+          </div>
+
 
         </section>
 
