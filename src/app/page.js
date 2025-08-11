@@ -4,7 +4,8 @@ import JoinWaitList from "./Components/joinwaitlist";
 export default function Home() {
   return (
     // annabel -- setting new colors hex code [#335E95] for logo color
-    <div className =" min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#335E95] to-white to-[50%] text-gray-800 font-sans text-center">
+    <div className ="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#3A6178] from-[40%] to-white text-gray-800 font-sans text-center">
+        {/* <div className = "absolute inset-y-0 left-0 w-1/4 bg-[url(/Assets/Water.jpg)]"/> */}
           {/* <JoinWaitList/> */}
           {/* <form className = "mt-6 flex flex-col  gap-2 max-w-md mx-auto">
             <div>
@@ -29,6 +30,7 @@ export default function Home() {
       
 
       {/* Starting Center Logo/phrase here */}
+      <div className = "w-full bg-cover bg-no-repeat bg-center mask-b-from-70% bg-[url(/Assets/Water.jpg)]">
 
        <section className = "absolute top-0 w-screen h-1/5 bg-[#c5d4e8]">
           {/* absolute inset-x-0 -translate-y-1/2*/}
@@ -53,11 +55,13 @@ export default function Home() {
             alt="Jade Dashboard Preview"
             className = "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
           /> */}
-         <section className="relative h-screen pl-10 w-full max-w-6xl px-6 py-12">
+        
+         <section className="relative h-screen mx-auto pl-10 w-full max-w-6xl px-6 py-12">
+
 
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
           <div className = "flex items-center justify-center h-screen">
-            <p className = "mx-auto text-4xl text-gray-700 max-w-3xl">
+            <p className = "mx-auto text-4xl text-gray-200 max-w-3xl">
                 Jade helps wealth advisors manage covered call strategies at scale —
                 with intelligent opportunity scanning, client reporting, and
                 compliance oversight.
@@ -66,6 +70,9 @@ export default function Home() {
 
 
         </section>
+        </div>
+        
+        
 
       {/* Sencond half of the page */}
 
@@ -91,6 +98,7 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+          <img src={'/Assets/Jared.jpg'} className='rounded-xl mx-auto w-sm'/>
             <h3 className="text-xl font-bold text-gray-900">
               Jared Lucas
             </h3>
@@ -118,7 +126,7 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-            <img src={'/Assets/Steve.jpg'} className='rounded-xl'/>
+            <img src={'/Assets/Steve.jpg'} className='rounded-xl mx-auto w-sm'/>
             <h3 className="text-xl font-bold text-gray-900">Steve Dorval</h3>
             <p className="text-gray-700">
               Co-Founder & Chief Product and Operating Officer
@@ -160,20 +168,28 @@ export default function Home() {
     
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-8"> 
 
-          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900">
-              Annabel Huber
-            </h3>
-            <p className="text-gray-700">Operations Analyst</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Annabel is a Colby College graduate, holding her Bachelor’s degree in Astrophysics and Computer Science. At Jade, she works with programming, market research, and strategic analysis. 
+          <div className="flex justify-between w-full gap-x-6 bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div className = "left-section">
+              <img src={'/Assets/Annabel.jpg'} className='rounded-xl mx-auto w-lg'/>
+            </div>
+
+            <div className = "right-section">
+
+              <h3 className="text-xl font-bold text-gray-900">
+                Annabel Huber
+              </h3>
+              <p className="text-gray-700">Operations Analyst</p>
+            
+              <p className="text-sm text-gray-500 mt-2">
+                Annabel is a Colby College graduate, holding her Bachelor’s degree in Astrophysics and Computer Science. At Jade, she works with programming, market research, and strategic analysis. 
+                </p>
+              <p className="text-sm text-gray-500 mt-2">
+              While her educational background gives her an analytical mindset and logic-based approach to finding solutions, Annabel has also worked in many customer-facing roles in the past, which drive her passion for a client-based product made for the needs of real people. 
               </p>
-            <p className="text-sm text-gray-500 mt-2">
-            While her educational background gives her an analytical mindset and logic-based approach to finding solutions, Annabel has also worked in many customer-facing roles in the past, which drive her passion for a client-based product made for the needs of real people. 
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-            The combination of strong product development with advanced mathematical and problem solving skills allows Annabel to tackle problems with Jade through a lens of curiosity, innovation, and excitement.
-            </p>
+              <p className="text-sm text-gray-500 mt-2">
+              The combination of strong product development with advanced mathematical and problem solving skills allows Annabel to tackle problems with Jade through a lens of curiosity, innovation, and excitement.
+              </p>
+            </div>
             
           </div>
 
