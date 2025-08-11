@@ -32,7 +32,7 @@ export default function Home() {
       {/* Starting Center Logo/phrase here */}
       <div className = "w-full bg-cover bg-no-repeat bg-center mask-b-from-70% bg-[url(/Assets/Water.jpg)]">
 
-       <section className = "absolute top-0 w-screen h-1/5 bg-[#c5d4e8]">
+       <section className = "absolute top-0 w-screen h-1/5 bg-[#DCE1E6]">
           {/* absolute inset-x-0 -translate-y-1/2*/}
           <div className="static top-0 mx-auto w-full max-w-6xl px-6 mt-10" >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
