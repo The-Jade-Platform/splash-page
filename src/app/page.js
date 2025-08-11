@@ -61,7 +61,7 @@ export default function Home() {
 
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
           <div className = "flex items-center justify-center h-screen">
-            <p className = "mx-auto text-4xl text-gray-200 max-w-3xl">
+            <p className = "mx-auto text-4xl text-gray-300 max-w-3xl">
                 Jade helps wealth advisors manage covered call strategies at scale —
                 with intelligent opportunity scanning, client reporting, and
                 compliance oversight.
@@ -77,13 +77,13 @@ export default function Home() {
       {/* Sencond half of the page */}
 
       <section className="w-full max-w-4xl px-6 py-12 mb-20">
-        <h1 className = "text-4xl font-semibold mb-4">
+        <h1 className = "text-4xl font-semibold mb-8 text-gray-200 ">
             About Jade
           </h1>
-        <h2 className = "mt-16 text-2xl font-semibold mb-4">
+        <h2 className = "mt-20 text-2xl font-semibold mb-4 text-gray-200">
         Built by advisors, for advisors.
         </h2>
-        <p className="text-gray-700 text-md">
+        <p className="text-gray-300 text-md">
           Jade was created by experienced fintech founders and advisors who
           understand how hard it is to balance income, risk, and compliance.
           We're building tools that help advisors deliver smarter strategies
@@ -92,7 +92,7 @@ export default function Home() {
         </p>
       </section>
       <section className="w-full max-w-6xl mb-4">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-3xl font-semibold text-gray-300 mb-8">
           Meet the Team
         </h2>
         
