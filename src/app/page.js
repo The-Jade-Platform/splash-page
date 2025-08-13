@@ -62,7 +62,7 @@ export default function Home() {
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
           <div className = "flex items-center justify-center h-screen">
             <p className = "mx-auto text-4xl text-gray-300 max-w-3xl">
-                Jade helps wealth advisors manage covered call strategies at scale —
+                Jade helps wealth advisors manage options strategies at scale —
                 with intelligent opportunity scanning, client reporting, and
                 compliance oversight.
                 </p>
