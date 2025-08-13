@@ -34,16 +34,16 @@ export default function Home() {
 
        <section className = "absolute top-0 w-screen h-1/5 bg-[#DCE1E6]">
           {/* absolute inset-x-0 -translate-y-1/2*/}
-          <div className="static top-0 mx-auto w-full max-w-6xl px-6 mt-10" >
+          <div className="flex flex-col top-0 mx-auto w-full max-w-6xl px-6 mt-5 " >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
               Options, Simplified for Advisors
               </h1> */}
               <img
                 src="/Assets/logo.png"
                 alt="Jade Dashboard Preview"
-                className = "mx-auto max-w-1/3"
+                className = "mx-auto w-[clamp(120px,55vw,350px)]"
               />
-              <h1 className = "relative left-7 bottom-5 text-4xl md:text-xl font-bold text-[#424952]">
+              <h1 className = "relative left-7 bottom-5 text-[clamp(1rem,1vw,1.5rem)] font-bold text-[#424952]">
                   Options, Simplified for Advisors
               </h1>
 
