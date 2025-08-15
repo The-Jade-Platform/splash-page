@@ -168,9 +168,9 @@ export default function Home() {
     
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-8"> 
 
-          <div className="flex justify-between w-full gap-x-6 bg-white p-6 rounded-xl shadow-md border border-gray-100">
+          <div className="flex flex-col md:flex-row justify-between w-full gap-x-6 bg-white p-6 rounded-xl shadow-md border border-gray-100">
             <div className = "left-section">
-              <img src={'/Assets/Annabel.jpg'} className='rounded-xl mx-auto w-lg'/>
+              <img src={'/Assets/Annabel.jpg'} className='rounded-xl mx-auto w-sm md:w-lg'/>
             </div>
 
             <div className = "right-section">
