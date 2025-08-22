@@ -5,7 +5,6 @@ export default function Home() {
   return (
     // annabel -- setting new colors hex code [#335E95] for logo color
     <div className ="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#3A6178] from-[40%] to-white text-gray-800 font-sans text-center">
-        {/* <div className = "absolute inset-y-0 left-0 w-1/4 bg-[url(/Assets/Water.jpg)]"/> */}
           {/* <JoinWaitList/> */}
           {/* <form className = "mt-6 flex flex-col  gap-2 max-w-md mx-auto">
             <div>
@@ -34,16 +33,16 @@ export default function Home() {
 
        <section className = "absolute top-0 w-screen h-1/5 bg-[#DCE1E6]">
           {/* absolute inset-x-0 -translate-y-1/2*/}
-          <div className="static top-0 mx-auto w-full max-w-6xl px-6 mt-10" >
+          <div className="flex flex-col top-0 mx-auto w-full max-w-6xl px-6 mt-5 " >
               {/* <h1 className =" text-4xl md:text-5xl font-bold text-[#0a0101] mb-4 ">
               Options, Simplified for Advisors
               </h1> */}
               <img
                 src="/Assets/logo.png"
                 alt="Jade Dashboard Preview"
-                className = "mx-auto max-w-1/3"
+                className = "mx-auto w-[clamp(120px,55vw,350px)]"
               />
-              <h1 className = "relative left-7 bottom-5 text-4xl md:text-xl font-bold text-[#424952]">
+              <h1 className = "relative left-7 bottom-5 text-[clamp(1rem,1vw,1.5rem)] font-bold text-[#424952]">
                   Options, Simplified for Advisors
               </h1>
 
@@ -62,7 +61,7 @@ export default function Home() {
           {/* <h1 className ="text-4xl md:text-3xl font-bold text-[#0a0101] ms-55 -mt-9 mb-4 "> */}
           <div className = "flex items-center justify-center h-screen">
             <p className = "mx-auto text-4xl text-gray-300 max-w-3xl">
-                Jade helps wealth advisors manage covered call strategies at scale —
+                Jade helps wealth advisors manage options strategies at scale —
                 with intelligent opportunity scanning, client reporting, and
                 compliance oversight.
                 </p>
@@ -86,7 +85,7 @@ export default function Home() {
         <p className="text-gray-300 text-md">
           Jade was created by experienced fintech founders and advisors who
           understand how hard it is to balance income, risk, and compliance.
-          We're building tools that help advisors deliver smarter strategies
+          We&apos;re building tools that help advisors deliver smarter strategies
           with less friction.
 
         </p>
@@ -107,10 +106,10 @@ export default function Home() {
               Jared brings a proven track record of strategic vision, entrepreneurial execution, and operational excellence to financial technology leadership.              
             </p>
             <p className="text-sm text-gray-500 mt-2">
-              Jared's career began in corporate strategy at Areva (now Orano), where he focused on mergers and acquisitions and climate change strategy for the nuclear energy giant. This experience in complex, highly regulated industries built his expertise in strategic risk assessment and long-term value creation.
+              Jared&apos;s career began in corporate strategy at Areva (now Orano), where he focused on mergers and acquisitions and climate change strategy for the nuclear energy giant. This experience in complex, highly regulated industries built his expertise in strategic risk assessment and long-term value creation.
             </p>
             <p className="text-sm text-gray-500 mt-2">
-              As an entrepreneur, Jared founded and successfully scaled a sustainable infrastructure company across Philadelphia, New York City, and Baltimore, ultimately achieving a profitable exit. He secured the first public-private partnership grant from the Department of Energy's $2 billion fund and executed a low seven-figure installation of a full-acre green roof, demonstrating mastery of innovative financing and large-scale project delivery
+              As an entrepreneur, Jared founded and successfully scaled a sustainable infrastructure company across Philadelphia, New York City, and Baltimore, ultimately achieving a profitable exit. He secured the first public-private partnership grant from the Department of Energy&apos;s $2 billion fund and executed a low seven-figure installation of a full-acre green roof, demonstrating mastery of innovative financing and large-scale project delivery
             </p>
             <p className="text-sm text-gray-500 mt-2">
               Transitioning to private equity, Jared served as an operating executive for portfolio companies, leading cross-functional teams to develop financial cases for technology implementations. His initiatives delivered measurable impact, including a documented 20% revenue uplift for a $2 billion revenue consolidation.
@@ -119,7 +118,7 @@ export default function Home() {
               For the past five years, Jared has operated in venture capital, advising startups and multinational corporations on scaling and investment strategies. His due diligence work includes saving a German Fortune 50 company $75 million by recommending against a problematic Series C investment. As a judge, mentor, and advisor for deep tech startups through MassChallenge, he continues to identify and nurture breakthrough technologies.
             </p>
             <p className="text-sm text-gray-500 mt-2">
-              Jared's experience spans the complete business lifecycle—from startup founding through institutional-scale operations—combining strategic thinking with hands-on execution and quantifiable results.
+              Jared&apos;s experience spans the complete business lifecycle—from startup founding through institutional-scale operations—combining strategic thinking with hands-on execution and quantifiable results.
             </p>
             <p className="text-sm text-gray-500 mt-2">
               Jared holds graduate degrees from University of Pennsylvania, École des Mines de Paris, and Tsinghua University.
@@ -163,17 +162,17 @@ export default function Home() {
             </p>
           </div>
        
-        </div>
+        {/* </div> */}
 
     
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-8"> 
+        {/* <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-8">  */}
 
-          <div className="flex justify-between w-full gap-x-6 bg-white p-6 rounded-xl shadow-md border border-gray-100">
-            <div className = "left-section">
-              <img src={'/Assets/Annabel.jpg'} className='rounded-xl mx-auto w-lg'/>
-            </div>
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            {/* <div className = "left-section"> */}
+              <img src={'/Assets/Annabel.jpg'} className='rounded-xl mx-auto w-sm'/>
+            {/* </div> */}
 
-            <div className = "right-section">
+            {/* <div className = "right-section"> */}
 
               <h3 className="text-xl font-bold text-gray-900">
                 Annabel Huber
@@ -189,10 +188,33 @@ export default function Home() {
               <p className="text-sm text-gray-500 mt-2">
               The combination of strong product development with advanced mathematical and problem solving skills allows Annabel to tackle problems with Jade through a lens of curiosity, innovation, and excitement.
               </p>
-            </div>
+            {/* </div> */}
             
           </div>
 
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            {/* <div className = "left-section"> */}
+              <img src={'/Assets/Hope.jpg'} className='rounded-xl mx-auto w-sm'/>
+            {/* </div> */}
+
+            {/* <div className = "right-section"> */}
+
+              <h3 className="text-xl font-bold text-gray-900">
+                Hope Rogan
+              </h3>
+              <p className="text-gray-700">Software Developer & Project Manager</p>
+            
+              <p className="text-sm text-gray-500 mt-2">
+              Hope is a business professional and software engineer with an undergraduate degree in Economics and a Master&apos;s in Computer Science from Tufts University. She blends a strong foundation in analytical thinking with technical expertise, working across project management, software development, cybersecurity and the design of user experiences.
+               </p>
+              <p className="text-sm text-gray-500 mt-2">
+              With hands-on start-up experience, Hope thrives in fast-moving environments where strategy and creativity intersect. She is known for being highly collaborative, bringing energy and focus to the teams she works with, and approaching challenges with a data-driven mindset.
+               </p>
+              <p className="text-sm text-gray-500 mt-2">
+              Her ability to connect with people, think strategically, and translate complex ideas into actionable solutions positions her as both a technical contributor and a thoughtful leader at the Jade Platform.
+              </p>
+
+          </div>
         </div>
       </section>
 
