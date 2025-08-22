@@ -205,13 +205,13 @@ export default function Home() {
               <p className="text-gray-700">Software Developer & Project Manager</p>
             
               <p className="text-sm text-gray-500 mt-2">
-              Hope is a business professional and software engineer with an undergraduate degree in Economics and a Master&apos;s in Computer Science from Tufts University. She blends a strong foundation in analytical thinking with technical expertise, working across project management, software development, cybersecurity and the design of user experiences.
-               </p>
+              Hope is a software engineer and project manager for Jade. She blends a strong foundation in analytical thinking with technical expertise, working across product management, software development, cybersecurity practice and the design of user experiences.
+              </p>
               <p className="text-sm text-gray-500 mt-2">
-              With hands-on start-up experience, Hope thrives in fast-moving environments where strategy and creativity intersect. She is known for being highly collaborative, bringing energy and focus to the teams she works with, and approaching challenges with a data-driven mindset.
-               </p>
+              With hands-on start-up experience, Hope thrives in fast-moving environments where strategy and creativity intersect. She is known for being highly collaborative, bringing energy and focus to the teams she works with, and approaching challenges with a data-driven mindset. Hope consistently succeeds in building innovative solutions.
+              </p>
               <p className="text-sm text-gray-500 mt-2">
-              Her ability to connect with people, think strategically, and translate complex ideas into actionable solutions positions her as both a technical contributor and a thoughtful leader at the Jade Platform.
+              Hope received a BA in Economics and a Masters degree in CS from Tufts University, where her education gives her the hard skills to drive the team forward technically. Her ability to connect with people, think strategically, and translate complex ideas into actionable solutions position her as both a technical contributor and product leader with Jade.
               </p>
 
           </div>
