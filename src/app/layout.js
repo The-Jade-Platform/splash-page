@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Jade Splash Page",
-  description: "Basic Information for Jade",
+  title: "Jade.",
+  description: "The Jade Platform",
 };
 
 export default function RootLayout({ children }) {
