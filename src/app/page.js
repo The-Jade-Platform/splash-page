@@ -76,6 +76,11 @@ export default function Home() {
           <TeamMemberCard {...annabelData} />
           <TeamMemberCard {...hopeData} />
         </div>
+
+        <div className="grid grid-cols-1 gap-8">
+          <TeamMemberCard {...deepData} />
+        </div>
+
       </section>
 
       <footer className="text-center py-8 text-sm text-gray-500">
