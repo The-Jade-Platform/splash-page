@@ -73,12 +73,12 @@ export default function Home() {
           <TeamMemberCard {...steveData} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <TeamMemberCard {...annabelData} />
           <TeamMemberCard {...hopeData} />
         </div>
 
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-8 mb-8">
           <TeamMemberCard {...deepData} />
         </div>
 
