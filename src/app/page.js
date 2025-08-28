@@ -8,6 +8,7 @@ import {
   steveData,
   annabelData,
   hopeData,
+  deepData,
 } from "./Components/bios/teamData";
 
 export default function Home() {
