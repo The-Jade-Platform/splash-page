@@ -1,8 +1,9 @@
 // teamData.js
+// change /Assets/... to ./Assets
 
 // jaredData.js
 export const jaredData = {
-  imageUrl: "/Assets/Jared.jpg",
+  imageUrl: "./Assets/Jared.jpg",
   name: "Jared Lucas",
   jobTitle: "Co-Founder & Chief Executive Officer",
   description: [
@@ -18,7 +19,7 @@ export const jaredData = {
 
 // steveData.js
 export const steveData = {
-  imageUrl: "/Assets/Steve.jpg",
+  imageUrl: "./Assets/Steve.jpg",
   name: "Steve Dorval",
   jobTitle: "Co-Founder & Chief Product and Operating Officer",
   description: [
@@ -32,7 +33,7 @@ export const steveData = {
 
 // annabelData.js
 export const annabelData = {
-  imageUrl: "/Assets/Annabel.jpg",
+  imageUrl: "./Assets/Annabel.jpg",
   name: "Annabel Huber",
   jobTitle: "Operations Analyst",
   description: [
@@ -44,7 +45,7 @@ export const annabelData = {
 
 // hopeData.js
 export const hopeData = {
-  imageUrl: "/Assets/Hope.jpg",
+  imageUrl: "./Assets/Hope.jpg",
   name: "Hope Rogan",
   jobTitle: "Software Developer & Project Manager",
   description: [
