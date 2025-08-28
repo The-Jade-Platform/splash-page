@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-##Master## is the base branch for this repo. To make edits to the site, you must edit as a Next.js app, execute npm run build, & make sure 'out' folder matches the name of where the site is being built from. For a custom domain, the css files must be relative paths, not absolute. Because Next.js doesn't support relative paths in next.config, it is set as '/docs/' now but should be changed in index.html to be './' 
+Master is the base branch for this repo. To make edits to the site, you must edit as a Next.js app, execute npm run build, & make sure 'out' folder matches the name of where the site is being built from. For a custom domain, the css files must be relative paths, not absolute. Because Next.js doesn't support relative paths in next.config, it is set as '/docs/' now but should be changed in index.html to be './' 
 
 ## Getting Started
 
