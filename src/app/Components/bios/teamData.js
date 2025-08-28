@@ -54,3 +54,16 @@ export const hopeData = {
     "Hope received a BA in Economics and a Masters degree in CS from Tufts University, where her education gives her the hard skills to drive the team forward technically. Her ability to connect with people, think strategically, and translate complex ideas into actionable solutions position her as both a technical contributor and product leader with Jade.",
   ],
 };
+
+
+// deepData.js
+export const deepData = {
+  imageUrl: "./Assets/Deep.jpg",
+  name: "Deep Prajapati",
+  jobTitle: "Software Engineer",
+  description: [
+  	"Deep is a full stack engineer with Jade by building backend services, frontend integration, secure APIs, and real-time dashboards. His work spans across data security, technical architecture, and scalable software development, where he focuses on delivering reliable and efficient solutions that strengthen Jade’s fintech foundation.",
+  	"Before joining Jade, Deep built several fintech-focused projects that gave him hands-on experience with trading systems, portfolio management, and regulatory considerations. By working with a wide range of technologies, including Java and Spring Boot Python, React and React Native for user interfaces, and database solutions spanning both SQL and NoSQL, he has intentionally explored the full breadth of full stack development. This exposure enables him to approach problems with both technical depth and versatility, balancing precision with creativity.",
+  	"Deep earned his Master’s in Computer Science from Northeastern University, where he also served as a Graduate Teaching Assistant mentoring students in data structures, algorithms, and backend systems. He has gained experience working in startups and fast-paced environments, which honed his ability to adapt quickly, collaborate closely, and deliver under evolving requirements.",
+  ],
+};
