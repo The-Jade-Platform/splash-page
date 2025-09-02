@@ -4,6 +4,7 @@
 // jaredData.js
 export const jaredData = {
   imageUrl: "/images/team-member-images/Jared.jpg",
+  linkedinLink: "https://www.linkedin.com/in/jared-ezra-lucas/",
   name: "Jared Lucas",
   jobTitle: "Co-Founder & Chief Executive Officer",
   description: [
@@ -20,6 +21,7 @@ export const jaredData = {
 // steveData.js
 export const steveData = {
   imageUrl: "/images/team-member-images/Steve.jpg",
+  linkedinLink: "https://www.linkedin.com/in/stevenfdorvalcfa/",
   name: "Steve Dorval",
   jobTitle: "Co-Founder & Chief Product and Operating Officer",
   description: [
@@ -34,6 +36,7 @@ export const steveData = {
 // annabelData.js
 export const annabelData = {
   imageUrl: "/images/team-member-images/Annabel.jpg",
+  linkedinLink: "https://www.linkedin.com/in/annabelhuber/",
   name: "Annabel Huber",
   jobTitle: "Operations Analyst",
   description: [
@@ -47,6 +50,7 @@ export const annabelData = {
 export const hopeData = {
   imageUrl: "/images/team-member-images/Hope.jpg",
   name: "Hope Rogan",
+  linkedinLink: "https://www.linkedin.com/in/hoperogan/",
   jobTitle: "Software Developer & Project Manager",
   description: [
     "Hope is a software engineer and project manager for Jade. She blends a strong foundation in analytical thinking with technical expertise, working across product management, software development, cybersecurity practice and the design of user experiences.",
@@ -58,6 +62,7 @@ export const hopeData = {
 // deepData.js
 export const deepData = {
   imageUrl: "/images/team-member-images/Deep.jpg",
+  linkedinLink: "https://www.linkedin.com/in/d-prajapati/",
   name: "Deep Prajapati",
   jobTitle: "Software Engineer",
   description: [
