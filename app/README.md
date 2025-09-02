@@ -1,0 +1,1 @@
+jade splash page
