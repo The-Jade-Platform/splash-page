@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
-
+import { PT_Serif } from "next/font/google";
+import Footer from "@/components/navigation/Footer";
+const ptSerif = PT_Serif({ subsets: ["latin"], weight: ["400", "700"] });
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
