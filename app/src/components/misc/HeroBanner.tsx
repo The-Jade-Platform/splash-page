@@ -10,7 +10,7 @@ const HeroBanner = () => {
       }}
     >
       {/* Optional overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-16 flex flex-col lg:flex-row items-start gap-8">
