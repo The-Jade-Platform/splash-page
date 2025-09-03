@@ -13,7 +13,7 @@ export default function AboutSection() {
       {/* Image */}
       <div className="flex-shrink-0 w-full md:w-1/2">
         <img
-          src="/images/temp.avif"
+          src="/images/pexels-anna-nekrashevich-6801874.jpg"
           alt="About Image"
           className="w-full h-auto rounded-sm shadow-md object-cover"
         />
@@ -28,11 +28,14 @@ export default function AboutSection() {
         </h2>
 
         <p className="text-gray-800 leading-relaxed">
-          Jade is a platform built by advisors, for advisors with the goal to
-          help advisors deliver smarter strategies with less friction.
-          <br />
-          Created by experienced fintech founders and advisors who understand
-          how hard it is to balance income, risk and compliance.
+          Jade is a platform built by advisors, for advisors. With the goal to
+          help advisors deliver smarter strategies with less friction for
+          options trading.
+        </p>
+        <p className="mt-4 text-gray-800 leading-relaxed">
+          The platform is developed by experienced fintech founders and advisors
+          who understand how hard it is to balance income, risk and compliance-
+          to deliver your clients the optimal solution and income generation.
         </p>
       </div>
     </section>
