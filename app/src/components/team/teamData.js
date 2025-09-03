@@ -3,7 +3,7 @@
 
 // jaredData.js
 export const jaredData = {
-  imageUrl: "/images/team-member-images/Jared.jpg",
+  imageUrl: "/images/team-member-images/Jared.png",
   linkedinLink: "https://www.linkedin.com/in/jared-ezra-lucas/",
   name: "Jared Lucas",
   jobTitle: "Co-Founder & Chief Executive Officer",
@@ -20,7 +20,7 @@ export const jaredData = {
 
 // steveData.js
 export const steveData = {
-  imageUrl: "/images/team-member-images/Steve.jpg",
+  imageUrl: "/images/team-member-images/Steve.png",
   linkedinLink: "https://www.linkedin.com/in/stevenfdorvalcfa/",
   name: "Steve Dorval",
   jobTitle: "Co-Founder & Chief Product and Operating Officer",
@@ -35,7 +35,7 @@ export const steveData = {
 
 // annabelData.js
 export const annabelData = {
-  imageUrl: "/images/team-member-images/Annabel.jpg",
+  imageUrl: "/images/team-member-images/annabel_720.png",
   linkedinLink: "https://www.linkedin.com/in/annabelhuber/",
   name: "Annabel Huber",
   jobTitle: "Operations Analyst",
@@ -61,7 +61,7 @@ export const hopeData = {
 
 // deepData.js
 export const deepData = {
-  imageUrl: "/images/team-member-images/Deep.jpg",
+  imageUrl: "/images/team-member-images/Deep.png",
   linkedinLink: "https://www.linkedin.com/in/d-prajapati/",
   name: "Deep Prajapati",
   jobTitle: "Software Engineer",
