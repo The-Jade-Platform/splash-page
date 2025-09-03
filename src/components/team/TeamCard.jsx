@@ -19,20 +19,22 @@ export default function TeamCard({ data }) {
         {/* Front of card */}
         <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative h-full">
-            {/* LinkedIn icon - top right */}
+            {/* LinkedIn icon - top right with transform fix */}
             {data.linkedinLink && (
-              <a
-                href={data.linkedinLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-4 right-4 z-10 hover:opacity-80 transition-opacity duration-200"
-              >
-                <img 
-                  src="/images/linkedinlogo.webp" 
-                  alt="LinkedIn" 
-                  className="w-6 h-6 object-contain"
-                />
-              </a>
+              <div className="absolute top-4 right-4 z-10 transform-gpu">
+                <a
+                  href={data.linkedinLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-80 transition-opacity duration-200"
+                >
+                  <img 
+                    src="/images/linkedinlogo.webp" 
+                    alt="LinkedIn" 
+                    className="w-6 h-6 object-contain"
+                  />
+                </a>
+              </div>
             )}
             
             {/* Image taking up most space */}
@@ -54,7 +56,7 @@ export default function TeamCard({ data }) {
               {/* Flip arrow */}
               <button
                 onClick={handleFlip}
-                className="absolute bottom-4 right-4 p-2 rounded-full text-white hover:opacity-90 transition-all duration-200"
+                className="absolute bottom-4 right-4 p-2 rounded-full text-white hover:opacity-90 transition-all duration-200 transform-gpu"
                 style={{ backgroundColor: '#215f9a' }}
               >
                 <ChevronRight className="w-4 h-4" />
@@ -65,20 +67,22 @@ export default function TeamCard({ data }) {
 
         {/* Back of card */}
         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg shadow-lg flex flex-col p-6">
-          {/* LinkedIn icon - top right (mirrored) */}
+          {/* LinkedIn icon - top right with counter-rotation for back side */}
           {data.linkedinLink && (
-            <a
-              href={data.linkedinLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 z-10 hover:opacity-80 transition-opacity duration-200"
-            >
-              <img 
-                src="/images/linkedinlogo.webp" 
-                alt="LinkedIn" 
-                className="w-6 h-6 object-contain"
-              />
-            </a>
+            <div className="absolute top-4 right-4 z-10 transform-gpu counter-rotate">
+              <a
+                href={data.linkedinLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity duration-200"
+              >
+                <img 
+                  src="/images/linkedinlogo.webp" 
+                  alt="LinkedIn" 
+                  className="w-6 h-6 object-contain"
+                />
+              </a>
+            </div>
           )}
           
           {/* Name / title */}
@@ -100,10 +104,10 @@ export default function TeamCard({ data }) {
             <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
           </div>
 
-          {/* Flip arrow */}
+          {/* Flip arrow with counter-rotation */}
           <button
             onClick={handleFlip}
-            className="absolute bottom-4 right-4 p-2 rounded-full text-white hover:opacity-90 transition-all duration-200 transform rotate-180"
+            className="absolute bottom-4 right-4 p-2 rounded-full text-white hover:opacity-90 transition-all duration-200 transform-gpu counter-rotate-with-flip"
             style={{ backgroundColor: '#215f9a' }}
           >
             <ChevronRight className="w-4 h-4" />
@@ -120,9 +124,14 @@ export default function TeamCard({ data }) {
         }
         .backface-hidden {
           backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
         .rotate-y-180 {
           transform: rotateY(180deg);
+        }
+        .transform-gpu {
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
         }
         .scrollbar-hide {
           -ms-overflow-style: none;
