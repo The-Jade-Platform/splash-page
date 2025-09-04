@@ -1,4 +1,7 @@
+// not used but could be resuraed with otehr stuff
+
 "use client";
+
 import React from "react";
 import { PT_Serif } from "next/font/google";
 
