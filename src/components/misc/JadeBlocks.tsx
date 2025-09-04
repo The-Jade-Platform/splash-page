@@ -36,13 +36,13 @@ const JadeBlocks = () => {
                 60/40 portfolios can deliver.
               </p>
               <p>
-                Jade's automation-supported options platform transforms the
+                Jade&apos;s automation-supported options platform transforms the
                 complex world of derivatives trading into an accessible,
                 scalable solution that enables RIAs to unlock new value for
                 their clients.
               </p>
               <p>
-                By removing the "complexity barrier" that has historically
+                By removing the &quot;complexity barrier&quot; that has historically
                 limited options adoption, Jade empowers advisors to confidently
                 implement yield-generating strategies, manage concentrated stock
                 positions, and create customized income solutions—all while
@@ -69,7 +69,7 @@ const JadeBlocks = () => {
                 wealth advisors.
               </p>
               <p>
-                The company's platform simplifies options trading through
+                The company&apos;s platform simplifies options trading through
                 automation, customizable strategies, and built-in compliance
                 monitoring.
               </p>
