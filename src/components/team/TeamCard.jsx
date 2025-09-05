@@ -29,7 +29,7 @@ export default function TeamCard({ data }) {
                   className="block hover:opacity-80 transition-opacity duration-200"
                 >
                   <img 
-                    src="/images/linkedinlogo.webp" 
+                    src="./images/linkedinlogo.webp" 
                     alt="LinkedIn" 
                     className="w-6 h-6 object-contain"
                   />
@@ -77,7 +77,7 @@ export default function TeamCard({ data }) {
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
                 <img 
-                  src="/images/linkedinlogo.webp" 
+                  src="./images/linkedinlogo.webp" 
                   alt="LinkedIn" 
                   className="w-6 h-6 object-contain"
                 />

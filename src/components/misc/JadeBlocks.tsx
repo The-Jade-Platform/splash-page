@@ -8,7 +8,7 @@ const JadeBlocks = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
-              src="/images/newspaper.jpg"
+              src="./images/newspaper.jpg"
               alt="Market Analytics and Growth"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
@@ -92,7 +92,7 @@ const JadeBlocks = () => {
 
           <div className="order-1 lg:order-2 relative">
             <img
-              src="/images/meeting.jpg"
+              src="./images/meeting.jpg"
               alt="Technology Platform and Integration"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />

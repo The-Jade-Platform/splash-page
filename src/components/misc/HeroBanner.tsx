@@ -6,7 +6,7 @@ const HeroBanner = () => {
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage:
-          "url('/images/jorge-vasconez-LCaKuYefLQk-unsplash.jpg')",
+          "url('./images/jorge-vasconez-LCaKuYefLQk-unsplash.jpg')",
       }}
     >
       {/* Optional overlay */}
@@ -18,7 +18,7 @@ const HeroBanner = () => {
         <div className="flex-shrink-0 w-full lg:w-1/2">
           <div className="p-6">
             <img
-              src="/images/logo.png"
+              src="./images/logo.png"
               alt="Profile"
               className="w-full h-96 object-contain rounded-lg mb-6"
             />
