@@ -79,7 +79,11 @@ jobs:
         run: |
           find ./out -name '*.html' -exec sed -i 's|="/_next|="./_next|g' {} \;
           find ./out -name '*.html' -exec sed -i 's|="/static|="./static|g' {} \;
-        # finding and replacing all asset paths after building
+          
+          find ./out -name '*.html' -exec sed -i 's|="/favicon|="./favicon|g' {} \;
+          find ./out -name '*.html' -exec sed -i 's|="/icons|="./icons|g' {} \;
+          find ./out -name '*.html' -exec sed -i 's|="/images|="./images|g' {} \;
+        # finding and replacing all asset paths after building (css, fonts, favicons, icons, images)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
