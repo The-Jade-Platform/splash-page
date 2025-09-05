@@ -3,7 +3,7 @@
 
 // jaredData.js
 export const jaredData = {
-  imageUrl: "/images/team-member-images/Jared.png",
+  imageUrl: "./images/team-member-images/Jared.png",
   linkedinLink: "https://www.linkedin.com/in/jared-ezra-lucas/",
   name: "Jared Lucas",
   jobTitle: "Co-Founder & Chief Executive Officer",
