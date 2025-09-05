@@ -75,6 +75,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Rewrite asset paths for custom domain
+        run: |
+          find ./out -name '*.html' -exec sed -i 's|="/_next|="./_next|g' {} \;
+          find ./out -name '*.html' -exec sed -i 's|="/static|="./static|g' {} \;
+        # finding and replacing all asset paths after building
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
