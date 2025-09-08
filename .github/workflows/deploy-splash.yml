@@ -33,3 +33,17 @@ jobs:
       # 4️⃣ Push the Docker image to GHCR
       - name: Push Docker image
         run: docker push ghcr.io/the-jade-platform/splash-page:latest
+
+      # 5️⃣ Deploy to EC2
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.EC2_HOST }} # EC2 public IP or DNS
+          username: ${{ secrets.EC2_USER }} # usually 'ec2-user'
+          key: ${{ secrets.EC2_SSH_KEY }} # your private key
+          port: 22
+          script: |
+            docker pull ghcr.io/the-jade-platform/splash-page:latest
+            docker stop splash-page || true
+            docker rm splash-page || true
+            docker run -d --name splash-page -p 80:80 ghcr.io/the-jade-platform/splash-page:latest
