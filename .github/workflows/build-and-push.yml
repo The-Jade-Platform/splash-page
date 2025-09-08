@@ -8,10 +8,6 @@ on:
   push:
     branches:
       - docker-setup
-    paths:
-      - "Dockerfile"
-      - "docker/**"
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
