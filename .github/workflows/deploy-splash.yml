@@ -45,6 +45,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
+            # Log in to GHCR using the org token
+            echo "${{ secrets.HOPES_ORG_TOKEN }}" | docker login ghcr.io -u the-jade-platform --password-stdin
+
+            # Pull the latest image and restart container
             docker pull ghcr.io/the-jade-platform/splash-page:latest
             docker stop splash-page || true
             docker rm splash-page || true
