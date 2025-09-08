@@ -45,23 +45,26 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            # Log in to GHCR using org token
-            echo "${{ secrets.HOPES_ORG_TOKEN }}" | docker login ghcr.io -u the-jade-platform --password-stdin
-
             # Pull the latest image
             docker pull ghcr.io/the-jade-platform/splash-page:latest
 
-            # Stop & remove old container if it exists
-            if [ "$(docker ps -q -f name=splash-page)" ]; then
-              echo "Stopping existing container..."
-              docker stop splash-page
-              docker rm splash-page
+            # Stop & remove old container if it exists by name
+            if [ "$(docker ps -aq -f name=splash-page)" ]; then
+              echo "Stopping and removing old splash-page container..."
+              docker stop splash-page || true
+              docker rm splash-page || true
             fi
 
             # Free host port 3001 if anything is listening
             if lsof -i :3001 >/dev/null 2>&1; then
-              echo "Port 3001 is in use, killing process..."
+              echo "Port 3001 is in use on host, killing process..."
               sudo fuser -k 3001/tcp
+            fi
+
+            # Free port 3001 if another docker container is publishing it
+            if docker ps --format '{{.ID}} {{.Ports}}' | grep -q '0.0.0.0:3001'; then
+              echo "Port 3001 is in use by another container, removing it..."
+              docker ps --format '{{.ID}} {{.Ports}}' | grep '0.0.0.0:3001' | awk '{print $1}' | xargs -r docker rm -f
             fi
 
             # Start new container on host port 3001 → container port 3001
