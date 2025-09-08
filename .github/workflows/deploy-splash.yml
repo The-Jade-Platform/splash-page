@@ -1,5 +1,9 @@
 name: Deploy Splash to EC2 Production
 
+permissions:
+  contents: read # needed to checkout the repo
+  packages: write # needed to push Docker images to GHCR
+
 on:
   push:
     branches:
