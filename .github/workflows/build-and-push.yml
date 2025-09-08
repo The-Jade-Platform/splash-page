@@ -5,9 +5,10 @@ permissions:
   packages: write
 
 on:
-  push:
-    branches:
-      - docker-setup
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - docker-setup
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
