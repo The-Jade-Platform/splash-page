@@ -24,9 +24,8 @@ jobs:
 
       # 3️⃣ Build the Docker image
       - name: Build Docker image
-          run: docker build -t ghcr.io/the-jade-platform/splash-page:latest .
-
+        run: docker build -t ghcr.io/the-jade-platform/splash-page:latest .
 
       # 4️⃣ Push the Docker image to GHCR
       - name: Push Docker image
-          run: docker push ghcr.io/the-jade-platform/splash-page:latest
+        run: docker push ghcr.io/the-jade-platform/splash-page:latest
