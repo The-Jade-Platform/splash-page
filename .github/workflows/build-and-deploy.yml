@@ -5,14 +5,9 @@ permissions:
   packages: write # Needed for GHCR
 
 on:
-  workflow_dispatch: # Manual trigger
   push:
     branches:
       - main
-    paths:
-      - "Dockerfile"
-      - "docker-compose.yml"
-      - "docker/**"
 
 jobs:
   build-and-push:
