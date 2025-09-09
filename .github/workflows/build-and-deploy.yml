@@ -8,7 +8,11 @@ on:
   workflow_dispatch: # Manual trigger
   push:
     branches:
-      - main # Optional automatic trigger
+      - main
+    paths:
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "docker/**"
 
 jobs:
   build-and-push:
