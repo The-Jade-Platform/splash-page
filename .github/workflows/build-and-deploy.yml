@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # Manual trigger
   push:
     branches:
-      - docker-setup # Optional automatic trigger
+      - main # Optional automatic trigger
 
 jobs:
   build-and-push:
