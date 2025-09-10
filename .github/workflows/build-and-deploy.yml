@@ -37,10 +37,10 @@ jobs:
           password: ${{ secrets.WORKER_BOT_PAT }}
 
       - name: Build Docker image
-        run: docker build -t ${{ env.REGISTRY }}/{{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
+        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
 
       - name: Push Docker image
-        run: docker push ${{ env.REGISTRY }}/{{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
   deploy:
     needs: build-and-push
@@ -66,12 +66,12 @@ jobs:
             fi
 
             # Remove old image
-            sudo docker rmi ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} || true
+            docker rmi ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} || true
 
             # Free host port if anything is listening
             if lsof -i :${{ env.HOST_PORT }} >/dev/null 2>&1; then
               echo "Port ${{ env.HOST_PORT }} is in use on host, killing process..."
-              sudo fuser -k ${{ env.HOST_PORT }}/tcp
+              fuser -k ${{ env.HOST_PORT }}/tcp
             fi
 
             # Free port if another docker container is publishing it
