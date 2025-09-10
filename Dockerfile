@@ -28,7 +28,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.ts ./next.config.ts
 
 # Expose Next.js default port
-EXPOSE 3001
+EXPOSE 3000
 
 # Start Next.js on port 3001
-CMD ["npm", "start", "--", "-p", "3001"]
+CMD ["npm", "start", "--", "-p", "3000"]

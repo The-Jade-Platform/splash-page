@@ -9,6 +9,17 @@ on:
     branches:
       - main
 
+env:
+  APP_NAME: the-jade-platform/splash-page
+  REGISTRY: ghcr.io
+  IMAGE_NAME: the-jade-platform/splash-page
+  IMAGE_TAG: latest
+  CONTAINER_NAME: splash-page
+  HOST_PORT: 3000
+  CONTAINER_PORT: 3000
+  EC2_USER: ec2-user
+  BOT_NAME: jade-workerbot
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -22,18 +33,18 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ env.BOT_NAME }}
+          password: ${{ secrets.WORKER_BOT_PAT }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/the-jade-platform/splash-page:latest .
+        run: docker build -t ${{ env.REGISTRY }}/{{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
 
       - name: Push Docker image
-        run: docker push ghcr.io/the-jade-platform/splash-page:latest
+        run: docker push ${{ env.REGISTRY }}/{{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
   deploy:
-    needs: build-and-push # Wait for build-and-push to finish
-    if: ${{ success() }} # Only run if the previous job succeeded
+    needs: build-and-push
+    if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to EC2
@@ -45,26 +56,29 @@ jobs:
           port: 22
           script: |
             # Pull the latest image
-            docker pull ghcr.io/the-jade-platform/splash-page:latest
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
-            # Stop & remove old container if it exists by name
-            if [ "$(docker ps -aq -f name=splash-page)" ]; then
-              echo "Stopping and removing old splash-page container..."
-              docker stop splash-page || true
-              docker rm splash-page || true
+            # Stop & remove old container if it exists
+            if [ "$(docker ps -aq -f name=${{ env.CONTAINER_NAME }})" ]; then
+              echo "Stopping and removing old container..."
+              docker stop ${{ env.CONTAINER_NAME }} || true
+              docker rm ${{ env.CONTAINER_NAME }} || true
             fi
 
-            # Free host port 3001 if anything is listening
-            if lsof -i :3001 >/dev/null 2>&1; then
-              echo "Port 3001 is in use on host, killing process..."
-              sudo fuser -k 3001/tcp
+            # Remove old image
+            sudo docker rmi ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} || true
+
+            # Free host port if anything is listening
+            if lsof -i :${{ env.HOST_PORT }} >/dev/null 2>&1; then
+              echo "Port ${{ env.HOST_PORT }} is in use on host, killing process..."
+              sudo fuser -k ${{ env.HOST_PORT }}/tcp
             fi
 
-            # Free port 3001 if another docker container is publishing it
-            if docker ps --format '{{.ID}} {{.Ports}}' | grep -q '0.0.0.0:3001'; then
-              echo "Port 3001 is in use by another container, removing it..."
-              docker ps --format '{{.ID}} {{.Ports}}' | grep '0.0.0.0:3001' | awk '{print $1}' | xargs -r docker rm -f
+            # Free port if another docker container is publishing it
+            if docker ps --format '{{.ID}} {{.Ports}}' | grep -q "0.0.0.0:${{ env.HOST_PORT }}"; then
+              echo "Port ${{ env.HOST_PORT }} is in use by another container, removing it..."
+              docker ps --format '{{.ID}} {{.Ports}}' | grep "0.0.0.0:${{ env.HOST_PORT }}" | awk '{print $1}' | xargs -r docker rm -f
             fi
 
-            # Start new container on host port 3001 → container port 3001
-            docker run -d --name splash-page -p 3001:3001 ghcr.io/the-jade-platform/splash-page:latest
+            # Start new container on host port → container port
+            docker run -d --name ${{ env.CONTAINER_NAME }} -p ${{ env.HOST_PORT }}:${{ env.CONTAINER_PORT }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
